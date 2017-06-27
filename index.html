@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Video Task</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+     <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<link href="css/style2.css" rel="stylesheet">
+</head>
+ 
+<body>
+<div class="page_p">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Task</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"  data-toggle="modal" data-target="#login-modal">Login</a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#signup-modal">Signup</a>
+                    </li> 
+                    <li>
+                        <a href="recording.html" style="display: none;">Recording</a>
+                    </li>
+                    <li>
+                        <a href="#" id="logout" style="display: none;">Sign out</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!--  =========Modal start========= -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+        <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Login to Your Account</h4>
+            </div>  
+            <div class="modal-body">
+                    <div id="error">
+                    <!-- error will be shown here ! -->
+                    </div>
+				  <form class="form-signin" method="post" id="login-form">
+					<div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email address" name="user_email" id="user_email" />
+                    <span id="check-e"></span>
+                    </div>
+					<div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" name="password" id="password" />
+                        </div>
+                       
+                      <hr />
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-default" name="btn-login" id="btn-login">
+                      <span class="glyphicon glyphicon-log-in"></span> &nbsp; Sign In
+                   </button> 
+                        </div> 
+				  </form>
+					 </div>
+				</div>
+			</div>
+		  </div>
+ 
+		   <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">  
+        <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Create an Account</h4>
+            </div> 
+            <div class="modal-body">
+                 <div id="error1">
+                    <!-- error will be shown here ! -->
+                    </div>
+	             <form class="form-signup" method="post" id="signup-form">
+                 <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Name" name="name" id="name" />
+                    
+                    </div>
+                    <div class="form-group" id="email-check">
+                    <input type="email" class="form-control" placeholder="Email address" name="email" id="email" />
+                    <span id="check-e"></span>
+                    <span id="check-e1"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" name="password" id="password" />
+                        </div>
+                    <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Mobile No." name="mobile" id="mobile" />
+                    
+                    </div>    
+                    <div class="form-group"> 
+                      <!-- -->
+                      <div>
+                      <div id="my_camera"></div><div id="results"  ></div>
+                      </div>
+                      <button type="button" class="btn btn-default snp" name="btn-snapshot" id="btn-snapshot" onClick="configure()">
+                    <span class="glyphicon glyphicon-cog"></span> &nbsp; Configure
+                   </button> 
+                   <button type="button" class="btn btn-default snp" name="btn-snapshot" id="btn-snapshot" onClick="take_snapshot()">
+                   <span class="glyphicon glyphicon-screenshot"></span> &nbsp; Take Snapshot
+                   </button> 
+                      <!-- <input type=button value="Save Snapshot" onClick="saveSnap()"> -->
+
+                      
+
+                    </div>  
+                       
+                      <hr />
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-default" name="btn-signup" id="btn-signup">
+                      <span class="glyphicon glyphicon-log-in"></span> &nbsp; Sign Up
+                   </button> 
+                        </div> 
+                  </form>
+					
+				  </div>
+				</div>
+			</div>
+		  </div>
+<!--  =========Modal End========= -->
+<script type="text/javascript" src="webcamjs/webcam.min.js"></script>
+<script language="JavaScript">
+    
+    // Configure a few settings and attach camera
+    function configure(){
+      Webcam.set({
+        width: 118,
+        height: 60,
+        image_format: 'jpeg',
+        jpeg_quality: 90
+      });
+      Webcam.attach( '#my_camera' );
+    }
+    // A button for taking snaps
+    
+
+    // preload shutter audio clip
+    var shutter = new Audio();
+    shutter.autoplay = false;
+    shutter.src = navigator.userAgent.match(/Firefox/) ? 'shutter.ogg' : 'shutter.mp3';
+
+    function take_snapshot() {
+      // play sound effect
+      shutter.play();
+
+      // take snapshot and get image data
+      Webcam.snap( function(data_uri) {
+        // display results in page
+        document.getElementById('results').innerHTML = 
+          '<img id="imageprev" src="'+data_uri+'"/><input type="hidden" value= "'+data_uri+'" name="profilepic">';
+      } );
+
+      Webcam.reset();
+    }
+
+    function saveSnap(){
+      // Get base64 value from <img id='imageprev'> source
+      var base64image =  document.getElementById("imageprev").src;
+
+       Webcam.upload( base64image, 'upload.php', function(code, text) {
+         console.log('Save successfully');
+         //console.log(text);
+            });
+
+    }
+  </script>
+
+
+
+
+
+     <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Video List
+                    <!-- <small>Secondary Text</small> -->
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 video_msg">
+                <div class="errs_del"></div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row" id="add_video_links">
+            <div id="error_resp"></div>
+                 
+        </div>  
+       
+
+    </div>
+    <!-- /.container -->
+    </div>
+ <!-- Footer -->
+        <footer id="footer"> 
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Task 2017</p>
+                </div> 
+            <!-- /.row -->
+        </footer>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+<script  src="js/action.js" type="text/JavaScript"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>  
+    <script src="js/jquery.validate.min.js"></script>
+    <!-- <script src="assets/register.js"></script> -->
+
+</body>
+
+</html>

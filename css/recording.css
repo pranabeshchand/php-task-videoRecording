@@ -1,0 +1,40 @@
+.afterlogin{display: none!important;}
+.loginsuccess{display: block!important;}
+.col-lg-8{    margin: 0 auto; float: none;}
+.col-lg-12 > p{margin:4 0 0px!important; }
+.page-header {
+    margin: 60px 0 0px;
+}
+
+.container{height:100%;}
+.page_p{width:100%;}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  margin: 0;
+  height:100%;
+ }
+ .recordrtc video{height:78%;padding-bottom: 7%;padding-top: 1%;}
+ footer{    background: #191616!important;
+    background-color: #000!important;
+    /* border: 1px solid; */
+    top: 28%!important; width:100%;max-width:100%;}
+    .foo-12{background: #000;}
+    .pa{text-align: center;}
+    .form-group {
+    margin-bottom: 2px;
+    padding-top: 2%;
+}
+.col-top{padding-top: 1%;}
+ .videoName{
+    width: 34%;
+    float: left;
+    margin-left: 22%;
+    position: absolute;
+}
+.upserve{
+    margin-left: 37%;
+}

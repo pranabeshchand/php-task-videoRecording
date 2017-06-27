@@ -1,0 +1,150 @@
+ html{height: 100%; width: 100%;}
+body { padding-top: 0;
+  overflow-x: hidden; height: 100%; width:100%;background-color: black;
+ } 
+ .container{height:100%;}
+form#login-form, form#signup-form {
+    color: #990000;
+}
+.afterlogin{display: none!important;}
+.loginsuccess{display: block!important;}
+/* audio::-webkit-media-controls-timeline,
+ video::-webkit-media-controls-timeline {
+    display: none;
+}
+ audio::-webkit-media-controls,
+ video::-webkit-media-controls {
+    display: none;
+}*/
+.wrapper{
+    display:table;
+    width:auto;
+    position:relative;
+    width:50%;margin-top: 6%;
+}
+.playpause {
+    /*background-image:url(http://png-4.findicons.com/files/icons/2315/default_icon/256/media_play_pause_resume.png);*/
+    background-repeat:no-repeat;
+    width:50%;
+    height:50%;
+    position:absolute;
+    left:0%;
+    right:0%;
+    top:0%;
+    bottom:0%;
+    margin:auto;
+    background-size:contain;
+    background-position: center;
+}
+.playpause > span{font-size: 66px; top:27px !important; left:50px;cursor: pointer;}
+.col-md-8 {float: none;margin: 0 auto;}
+footer {
+     margin: 0 0; 
+    overflow: hidden;
+    text-align: center;
+    background: #000;
+    z-index: 9999;
+position: absolute;
+width: 100%;
+
+}
+footer > div{ padding: 0 125px;}
+.col-lg-12 > p{margin:4 0 10px!important;padding-top: 1%; }
+.page-header{margin: 31px 0 20px;}
+ 
+.vnam{width:86%;padding-left: 6%; font-size: 17px;text-transform: capitalize; }
+.dlt{top:26px;    cursor: pointer; position: static;float: right;
+    margin-right: 5%;}
+.page_p{width:100%; overflow: auto;height: 93%;
+top: 30px;
+position: relative;background-color: white;
+}
+.videff{ 
+    border: 1px solid #d4cece;
+    box-shadow: 5px 5px 6px 0px rgba(208, 208, 208, 0.7);
+}
+@media only screen and (max-width: 400px) {
+    #myVideo {
+        width: 287px;
+    }
+    #myVideo1{
+      width: 300px;
+    height: 305px; 
+    }
+}
+@media only screen and (max-width: 500px) and (min-width: 401px)  {
+    #myVideo {
+        width: 198px;
+padding-left: 3%;
+
+    }
+    .col-md-4{width: 50%;float: left;}
+    .playpause > span{left: 26px;}
+    #myVideo1{width: 409px; 
+margin-left: 4%;
+margin-top: 0;
+}
+}
+@media only screen and (max-width: 600px) and (min-width: 501px)  {
+    #myVideo {
+        width: 198px;
+padding-left: 3%;
+
+    }
+    .col-md-4{width: 50%;float: left;}
+    .playpause > span{left: 26px;}
+    #myVideo1{width: 409px; 
+    margin-left: 4%;
+    margin-top: 0;
+    }
+    .col-md-4{width: 50%;}
+}
+@media only screen and (max-width: 700px) and (min-width: 601px)  {
+    #myVideo {
+        width: 198px;
+padding-left: 3%;
+
+    }
+    .col-md-4{width: 50%;float: left;}
+    .playpause > span{left: 26px;}
+    #myVideo1{width: 409px; 
+    margin-left: 4%;
+    margin-top: 0;
+    }
+    .col-md-4{width: 50%;}
+}
+@media only screen and (max-width: 800px) and (min-width: 701px)  {
+    #myVideo {
+            width: 273px;
+            margin-left: 3%;
+
+    }
+    .portfolio-item {
+     width: 43%;
+    float: left;
+    }  
+}
+@media only screen and (max-width: 900px) and (min-width: 801px)  {
+    #myVideo {
+            width: 281px;
+          margin-left: 2%; 
+    }
+    .portfolio-item {
+     width: 43%;
+    float: left;
+    }
+
+    
+}
+@media only screen and (max-width: 1000px) and (min-width: 901px)  {
+    #myVideo {
+            width: 281px;
+          margin-left: 2%; 
+    }
+    .portfolio-item {
+     width: 43%;
+    float: left;
+    }
+
+    
+}

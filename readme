@@ -1,1 +1,11 @@
 
+steps to install
+===========================
+PHP require Version
+==================================
+version > 5.6
+
+steps1. create Database called task
+step2. upload task.sql file into the database
+step3. run git command "git clone git@github.com:pranabeshchand/php-task-videoRecording.git"
+after that run on index.html file in browser
